@@ -1,0 +1,15 @@
+const themeToggle = document.getElementById('theme-toggle')
+const btn = document.getElementById('menu-btn')
+const nav = document.getElementById('menu')
+
+btn.addEventListener('click', () => {
+  btn.classList.toggle('open')
+  nav.classList.toggle('flex')
+  nav.classList.toggle('hidden')
+})
+
+// JavaScript to toggle dark mode
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+});

@@ -1,0 +1,344 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url('../img/bg-tablet-pattern.svg');
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: 90% -25%;
+}
+
+#cta {
+  background-image: url('../img/bg-simplify-section-desktop.svg');
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 576px) {
+  body {
+    background-position: 50px -50px;
+    background-size: 500px;
+  }
+
+  #cta {
+    background-image: url('../img/bg-simplify-section-mobile.svg');
+  }
+}
+
+/* Hamburger Menu */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+/* General Styles */
+body {
+    background-color: white; /* Default light mode background */
+    color: black; /* Default text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+/* Dark Mode General Styles */
+body.dark {
+    background-color: #0f0f0f; /* Dark mode background */
+    color: #ffffff; /* Light text in dark mode */
+}
+
+/* Navbar Styles */
+nav {
+    background-color: white; /* Default navbar background */
+    color: black; /* Light mode text color */
+    /* border-bottom: 1px solid #ccc; */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a {
+    color: black; /* Navbar links in light mode */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff6347; /* Light mode hover effect */
+}
+
+nav #theme-toggle {
+    background-color: #ffffff; /* Default light mode button */
+    color: #000000;
+    /* border: 1px solid #ccc; */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark nav {
+    background-color: #0f0f0f; /* Dark mode navbar */
+    color: white;
+
+}
+
+body.dark nav a {
+    color: white;
+    /* background-color: #ff4500; Navbar links in dark mode */
+}
+body.dark nav #jk a {
+    background-color: #ff4500; /* Dark mode background color */
+    color: white; /* Ensure text remains readable */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+body.dark nav #jk a:hover {
+    background-color: #ff6347; /* Hover effect in dark mode */
+}
+
+
+body.dark nav a:hover {
+    color: #f0a500; /* Dark mode hover effect */
+}
+
+body.dark #theme-toggle {
+    background-color: #333; /* Dark mode button background */
+    color: white;
+}
+
+body.dark nav #theme-toggle:hover {
+    background-color: #444; /* Darker hover effect */
+}
+
+/* Hero Section */
+#hero {
+    background-color: white; /* Default light mode */
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#hero a {
+    background-color: #ff6347; /* CTA button */
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#hero a:hover {
+    background-color: #ff6347; /* Hover state */
+}
+
+body.dark #hero {
+    background-color: #0f0f0f; /* Dark mode hero background */
+    color: white;
+}
+
+body.dark #hero a {
+    background-color: #ff4500;
+    color: white;
+}
+
+body.dark #hero a:hover {
+    background-color: #ff6347;
+}
+
+/* Features Section */
+#features {
+    background-color: white; /* Default light mode */
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+
+#features h2 {
+    color: black; /* Section header in light mode */
+}
+
+#features p {
+    color: #555; /* Muted text in light mode */
+}
+
+body.dark #features {
+    background-color: #0f0f0f; /* Dark mode background */
+    color: white;
+}
+
+body.dark #features h2 {
+    color:white; /* Section header in dark mode */
+}
+
+body.dark #features p {
+    color: #d3d3d3; /* Muted text for dark mode */
+}
+body.dark #features #n{
+    background-color: #ff4500;
+    color:white;
+}
+/* Testimonials Section */
+#testimonials {
+    background-color: white; /* Default light mode */
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#testimonials .bg-veryLightGray {
+    background-color: #f9f9f9; /* Light mode card background */
+}
+
+#testimonials p {
+    color: #555; /* Text in light mode */
+}
+
+body.dark #testimonials {
+    background-color: #0f0f0f; /* Dark mode testimonials */
+    color: white;
+}
+
+body.dark #testimonials .bg-veryLightGray {
+    background-color:#ff4500;
+     /* Dark mode card background */
+}
+
+body.dark #testimonials p {
+    color: #d3d3d3;
+   /* Muted text in dark mode */
+}
+body.dark #testimonials a{
+    background-color: #ff4500; /* Same CTA background for dark mode */
+    color: white;
+}
+
+/* CTA Section */
+#cta {
+    background-color:  #ff6347; /* Bright CTA section */
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#cta a {
+    background-color: white; /* Light CTA button */
+    color: #ff4500;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#cta a:hover {
+    background-color: #ff6347; /* Hover effect */
+    color: white;
+}
+
+body.dark #cta {
+    background-color: #ff4500; /* Same CTA background for dark mode */
+    color: white;
+}
+
+body.dark #cta a {
+    background-color: white;
+    color: #ff4500;
+}
+
+body.dark #cta a:hover {
+    background-color: #ff6347;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: white; /* Default light mode */
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ff6347;
+}
+
+footer input {
+    color: #333;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+footer button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer button:hover {
+    background-color: #ff6347;
+}
+
+body.dark footer {
+    background-color: #0f0f0f; /* Dark mode footer */
+    color: white;
+}
+
+body.dark footer a {
+    color:#ff4500; /* Links in dark mode */
+}
+
+body.dark footer a:hover {
+    color:#ff6347; /* Hover state */
+}
+
+body.dark footer div#d {
+    color: #ff4500 !important; /* Use !important to override conflicts */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+body.dark footer input {
+    background-color: white;
+    color: #333;
+}
+
+body.dark footer button {
+    background-color: #ff4500;
+    color: white;
+}
+
+body.dark footer button:hover {
+    background-color: #ff6347;
+}
